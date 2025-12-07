@@ -1295,6 +1295,9 @@ public static class BaseGateList
     public static DoorData Shadow_03__top1 { get; } = new(new(Shadow_03, top1), new(Shadow_21, bot1));
     public static DoorData Shadow_04__left1 { get; } = new(new(Shadow_04, left1))
     {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
+        ]),
         DynamicTargets = new([
             new(Dust_Maze_09_entrance, right1),
             new(Dust_09, right1)
@@ -1305,15 +1308,38 @@ public static class BaseGateList
     public static DoorData Shadow_04__top1 { get; } = new(new(Shadow_04, top1), new(Shadow_20, bot1));
     public static DoorData Shadow_04b__left1 { get; } = new(new(Shadow_04b, left1), new(Shadow_04, right1));
     public static DoorData Shadow_04b__right1 { get; } = new(new(Shadow_04b, right1), new(Shadow_02, left2));
-    public static DoorData Shadow_05__left1 { get; } = new(new(Shadow_05, left1), new(Dust_06, right1));
+    public static DoorData Shadow_05__left1 { get; } = new(new(Shadow_05, left1), new(Dust_06, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
+        ])
+    };
     public static DoorData Shadow_05__right1 { get; } = new(new(Shadow_05, right1), new(Shadow_09, left2));
-    public static DoorData Shadow_08__left1 { get; } = new(new(Shadow_08, left1), new(Shadow_27, right1));
+    public static DoorData Shadow_08__left1 { get; } = new(new(Shadow_08, left1), new(Shadow_27, right1))
+    {
+        Obstacles = new([
+            new UnmaskerInfo("Masks"),
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo()),
+            new ObstacleInfo("Breakable Wall Swamp Shortcut", ObstacleType.Other, ObstacleSeverity.AbnormalVisual, new PersistentBoolSaveInfo(ID: "BreakableWallSwampBenchShortcut"))
+        ])
+    };
     public static DoorData Shadow_08__top1 { get; } = new(new(Shadow_08, top1), new(Shadow_10, bot1));
     public static DoorData Shadow_09__left1 { get; } = new(new(Shadow_09, left1), new(Shadow_03, right1));
     public static DoorData Shadow_09__left2 { get; } = new(new(Shadow_09, left2), new(Shadow_05, right1));
-    public static DoorData Shadow_09__left3 { get; } = new(new(Shadow_09, left3), new(Shadow_28, right1));
+    public static DoorData Shadow_09__left3 { get; } = new(new(Shadow_09, left3), new(Shadow_28, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
+        ])
+    };
     public static DoorData Shadow_09__right1 { get; } = new(new(Shadow_09, right1), new(Shadow_Weavehome, left1));
-    public static DoorData Shadow_10__bot1 { get; } = new(new(Shadow_10, bot1), new(Shadow_08, top1));
+    public static DoorData Shadow_10__bot1 { get; } = new(new(Shadow_10, bot1), new(Shadow_08, top1))
+    {
+        Obstacles = new([
+            new UnmaskerInfo("Masks"),
+            new ObstacleInfo("Breakable Wall", ObstacleType.Other, ObstacleSeverity.AbnormalVisual, new PersistentBoolSaveInfo())
+        ])
+    };
     public static DoorData Shadow_10__left1 { get; } = new(new(Shadow_10, left1), new(Shadow_16, right1));
     public static DoorData Shadow_10__right1 { get; } = new(new(Shadow_10, right1), new(Shadow_19, left2));
     public static DoorData Shadow_11__left1 { get; } = new(new(Shadow_11, left1), new(Shadow_26, right1));
@@ -1333,7 +1359,12 @@ public static class BaseGateList
     public static DoorData Shadow_19__left1 { get; } = new(new(Shadow_19, left1), new(Shadow_12, right1));
     public static DoorData Shadow_19__left2 { get; } = new(new(Shadow_19, left2), new(Shadow_10, right1));
     public static DoorData Shadow_19__right1 { get; } = new(new(Shadow_19, right1), new(Shadow_25, left1));
-    public static DoorData Shadow_19__right2 { get; } = new(new(Shadow_19, right2), new(Shadow_24, left1));
+    public static DoorData Shadow_19__right2 { get; } = new(new(Shadow_19, right2), new(Shadow_24, left1))
+    {
+        Obstacles = new([
+            new TestObjObstacleInfo("Shakra Trail Quest Parent (1)", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility)
+        ])
+    };
     public static DoorData Shadow_20__bot1 { get; } = new(new(Shadow_20, bot1), new(Shadow_04, top1));
     public static DoorData Shadow_20__top1 { get; } = new(new(Shadow_20, top1), new(Shadow_22, bot1));
     public static DoorData Shadow_21__bot1 { get; } = new(new(Shadow_21, bot1), new(Shadow_03, top1));
@@ -1349,7 +1380,12 @@ public static class BaseGateList
     public static DoorData Shadow_26__right1 { get; } = new(new(Shadow_26, right1), new(Shadow_11, left1));
     public static DoorData Shadow_26__right2 { get; } = new(new(Shadow_26, right2), new(Shadow_27, left1));
     public static DoorData Shadow_27__left1 { get; } = new(new(Shadow_27, left1), new(Shadow_26, right2));
-    public static DoorData Shadow_27__right1 { get; } = new(new(Shadow_27, right1), new(Shadow_08, left1));
+    public static DoorData Shadow_27__right1 { get; } = new(new(Shadow_27, right1), new(Shadow_08, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("shortcut", ObstacleType.OneWayBreakableExit, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(SceneName: Shadow_08, ID: "BreakableWallSwampBenchShortcut"))
+        ])
+    };
     public static DoorData Shadow_28__right1 { get; } = new(new(Shadow_28, right1), new(Shadow_09, left3));
     public static DoorData Shadow_Bilehaven_Room__left1 { get; } = new(new(Shadow_Bilehaven_Room, left1), new(Shadow_18, door1));
     public static DoorData Shadow_Weavehome__left1 { get; } = new(new(Shadow_Weavehome, left1), new(Shadow_09, right1));

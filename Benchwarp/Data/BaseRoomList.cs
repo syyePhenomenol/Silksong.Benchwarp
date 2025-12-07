@@ -5005,7 +5005,7 @@ public static class BaseRoomList
         Name = SceneNames.Shadow_Weavehome,
         MapZone = MapZone.DUSTPENS,
         MapArea = MapAreaNames.Bilewater,
-        TitledArea = TitledAreaNames.Bilewater,
+        TitledArea = TitledAreaNames.Weavenest_Murglin,
         Gates = new([
             Shadow_Weavehome__left1,
         ]),

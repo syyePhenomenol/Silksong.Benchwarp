@@ -2,20 +2,6 @@
 
 ## Unresolved Notes
 
-### Bilewater
-  - Bellway_08: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
-  - Shadow_04 missing a transition into the mist
-  - Shadow_05[left1] and Dust_06[right1] put you behind a breakable wall and not visible. You can still break it though
-  - Shadow_08[left1] and Shadow_27[right1] need lots of crap removed
-    - _08 has breakable walls that need to be broken
-    - _27 has a solid wall unless the b-wall in _08 is broken
-  - Shadow_09[left3] puts you behind a breakable wall, you can break but you're invisible
-  - Shadow_10[bot1] you're invisible unless a nearby b-wall is broken
-  - Shadow_15[right2] is fine, but if you go further into the room there's a visual mask unless you've sat on the trap bench. Probably no action needed
-  - Shadow_19[right2] is blocked off, I believe only opened by the Shakra quest
-  - Shadow_22[topi] correctly maps to Library_07[boti] for i=1,2,3 but they're the same one-way drop transition
-  - Shadow_Weavehome should be Weavenest Murglin titled area-wise
-
 ### High Halls
   - Hang_03[right2] and Hang_10[left1] are blocked unless the b-wall in _10 is broken
     - _03 puts you behind a gate
@@ -45,7 +31,7 @@
 ### Lost_Verdania
     - Clover_04b__door1: Still needs permanent obstacle handling.
 
-(I got lazy with documenting permanent obstacle handling - basically anything that doesn't implement ISaveableObstacle needs to be reverified).
+(I got lazy with documenting permanent obstacle handling - basically anything that doesn't have an ObstacleSaveInfo needs to be reverified).
 
 The below areas have been checked when using the old door warp coroutine - many issues with softlocks/camera are likely already fixed with the new coroutine.
 
@@ -400,7 +386,6 @@ The below areas have been checked when using the new door warp coroutine.
 
 ### Doors with dynamic targets
     - Dust_09__right1: collider obstacle.
-    - Shadow_04__left1: collider obstacle.
 
 ## Resolved Notes
 
@@ -474,3 +459,20 @@ The below areas have been checked when using the new door warp coroutine.
     - Under_20: titled area should be Chapel of the Architect.
     - Under_27: map/titled area should be Grand Gate.
     - Under_27__right2: collider obstacle.
+
+### Bilewater
+  - Bellway_08: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
+  - Shadow_04 missing a transition into the mist
+  - Shadow_05[left1] and Dust_06[right1] put you behind a breakable wall and not visible. You can still break it though
+  - Shadow_08[left1] and Shadow_27[right1] need lots of crap removed
+    - _08 has breakable walls that need to be broken
+    - _27 has a solid wall unless the b-wall in _08 is broken
+  - Shadow_09[left3] puts you behind a breakable wall, you can break but you're invisible
+  - Shadow_10[bot1] you're invisible unless a nearby b-wall is broken
+  - Shadow_15[right2] is fine, but if you go further into the room there's a visual mask unless you've sat on the trap bench. Probably no action needed
+  - Shadow_19[right2] is blocked off, I believe only opened by the Shakra quest
+  - Shadow_22[topi] correctly maps to Library_07[boti] for i=1,2,3 but they're the same one-way drop transition
+  - Shadow_Weavehome should be Weavenest Murglin titled area-wise
+
+### Doors with dynamic targets
+    - Shadow_04__left1: collider obstacle.
