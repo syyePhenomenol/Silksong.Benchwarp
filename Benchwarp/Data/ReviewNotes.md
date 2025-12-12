@@ -16,45 +16,13 @@
 ### Putrified_Ducts
     - Aqueduct_05__door2: Both NoSave and permanent handling needs to be done. Complicated because of the additive scenes.
 
+### Far_Fields
+    - Bone_East_11__right1: interaction with the left side transition/the bridge is unhandled in NoSave behaviour.
+    - Bone_East_16__right1 / Bone_East_17b__left1: two way breakable wall, but controlled by two separate PersistentBoolItems?
+
 (I got lazy with documenting permanent obstacle handling - basically anything that doesn't have an ObstacleSaveInfo needs to be reverified).
 
 The below areas have been checked when using the old door warp coroutine - many issues with softlocks/camera are likely already fixed with the new coroutine.
-
-### Far_Fields
-    - Bellshrine_05: map/titled area should be Deep Docks.
-    - Bellshrine_05__right1: collider obstacle.
-    - Bellway_03: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
-    - Bone_East_01: map/titled area should be Deep Docks.
-    - Bone_East_02__left1: collider obstacle.
-    - Bone_East_03: map/titled area should be Deep Docks.
-    - Bone_East_03__top1: collider obstacle.
-    - Bone_East_04: map/titled area should be Deep Docks.
-    - Bone_East_04__bot1: collider obstacle.
-    - Bone_East_04__left1: collider obstacle.
-    - Bone_East_04b: map/titled area should be Deep Docks.
-    - Bone_East_04b__right1: collider obstacle.
-    - Bone_East_04c: map/titled area should be Deep Docks.
-    - Bone_East_05: map/titled area should be Deep Docks.
-    - Bone_East_05__left1: collider obstacle.
-    - Bone_East_07__top1: collider obstacle.
-    - Bone_East_09__right2: potential visual obstacle.
-    - Bone_East_09__top1: collider obstacle.
-    - Bone_East_09b__bot1: collider obstacle.
-    - Bone_East_10__door1: Door is closed when hornet enters the scene and the door mechanism hasn't been broken.
-    - Bone_East_10__right1: collider obstacle.
-    - Bone_East_10__right2: collider obstacle.
-    - Bone_East_10_Church__left1: collider obstacle.
-    - Bone_East_10_Room: titled area should be Pilgrim's Rest (?)
-    - Bone_East_11__bot1: collider obstacle.
-    - Bone_East_11__right1: collider obstacle.
-    - Bone_East_11__top1: collider obstacle (forces hornet to enter the transition).
-    - Bone_East_12: map/titled area should be Deep Docks.
-    - Bone_East_12__bot1: visual obstacle (hatch isn't open when hornet enters scene).
-    - Bone_East_13: map/titled area should be Deep Docks.
-    - Bone_East_14__right2: collider obstacle.
-    - Bone_East_16__right1: collider obstacle.
-    - Bone_East_17b__left1: collider obstacle.
-    - Bone_East_18c__left1: collider obstacle.
 
 ### Deep_Docks
     - Bellway_02: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
@@ -476,6 +444,42 @@ The below areas have been checked when using the new door warp coroutine.
     - Aqueduct_04__bot1: screen is pitch-black (either collider or camera issue).
     - Aqueduct_08__left1: collider obstacle.
     - Bellway_Aqueduct: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
+
+### Far_Fields
+    - Bellshrine_05: map/titled area should be Deep Docks.
+    - Bellshrine_05__right1: collider obstacle.
+    - Bellway_03: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
+    - Bone_East_01: map/titled area should be Deep Docks.
+    - Bone_East_02__left1: collider obstacle.
+    - Bone_East_03: map/titled area should be Deep Docks.
+    - Bone_East_03__top1: collider obstacle.
+    - Bone_East_04: map/titled area should be Deep Docks.
+    - Bone_East_04__bot1: collider obstacle.
+    - Bone_East_04__left1: collider obstacle.
+    - Bone_East_04b: map/titled area should be Deep Docks.
+    - Bone_East_04b__right1: collider obstacle.
+    - Bone_East_04c: map/titled area should be Deep Docks.
+    - Bone_East_05: map/titled area should be Deep Docks.
+    - Bone_East_05__left1: collider obstacle.
+    - Bone_East_07__top1: collider obstacle.
+    - Bone_East_09__right2: potential visual obstacle.
+    - Bone_East_09__top1: collider obstacle.
+    - Bone_East_09b__bot1: collider obstacle.
+    - Bone_East_10__door1: Door is closed when hornet enters the scene and the door mechanism hasn't been broken.
+    - Bone_East_10__right1: collider obstacle.
+    - Bone_East_10__right2: collider obstacle.
+    - Bone_East_10_Church__left1: collider obstacle.
+    - Bone_East_10_Room: titled area should be Pilgrim's Rest (?)
+    - Bone_East_11__bot1: collider obstacle.
+    - Bone_East_11__right1: collider obstacle.
+    - Bone_East_11__top1: collider obstacle (forces hornet to enter the transition).
+    - Bone_East_12: map/titled area should be Deep Docks.
+    - Bone_East_12__bot1: visual obstacle (hatch isn't open when hornet enters scene).
+    - Bone_East_13: map/titled area should be Deep Docks.
+    - Bone_East_14__right2: collider obstacle.
+    - Bone_East_16__right1: collider obstacle.
+    - Bone_East_17b__left1: collider obstacle.
+    - Bone_East_18c__left1: collider obstacle.
 
 ### Doors with dynamic targets
     - Shadow_04__left1: collider obstacle.

@@ -17,6 +17,11 @@ public enum ObstacleType
     /// </summary>
     OneWayBreakableExit,
 
+    // /// <summary>
+    // /// A breakable wall that opens from both sides.
+    // /// </summary>
+    TwoWayBreakable,
+
     /// <summary>
     /// A wall that opens by switch/lever mechanism, controlled only from this side.
     /// </summary>
@@ -46,11 +51,6 @@ public enum ObstacleType
     /// Anything else that does not fit into the other categories.
     /// </summary>
     Other
-
-    // /// <summary>
-    // /// A breakable wall that opens from both sides.
-    // /// </summary>
-    // TwoWayBreakable,
 
     // /// <summary>
     // /// A wall that opens by switch/lever mechanism, controlled from both sides.

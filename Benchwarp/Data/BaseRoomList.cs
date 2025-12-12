@@ -683,8 +683,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bellshrine_05,
         MapZone = MapZone.DOCKS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bellshrine_05__left1,
             Bellshrine_05__right1,
@@ -1318,8 +1318,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_01,
         MapZone = MapZone.DOCKS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_01__left1,
             Bone_East_01__left2,
@@ -1360,8 +1360,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_03,
         MapZone = MapZone.WILDS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_03__left1,
             Bone_East_03__top1,
@@ -1372,8 +1372,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_04,
         MapZone = MapZone.WILDS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_04__bot1,
             Bone_East_04__left1,
@@ -1387,8 +1387,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_04b,
         MapZone = MapZone.WILDS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_04b__left1,
             Bone_East_04b__right1,
@@ -1400,8 +1400,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_04c,
         MapZone = MapZone.WILDS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_04c__left1,
         ]),
@@ -1411,8 +1411,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_05,
         MapZone = MapZone.WILDS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_05__left1,
             Bone_East_05__right1,
@@ -1513,6 +1513,7 @@ public static class BaseRoomList
         Name = SceneNames.Bone_East_10_Room,
         MapZone = MapZone.WILDS,
         MapArea = MapAreaNames.Far_Fields,
+        // Could be Pilgrim's Rest, but then it'd be only one room for the titled area
         TitledArea = TitledAreaNames.Far_Fields,
         Gates = new([
             Bone_East_10_Room__right1,
@@ -1538,8 +1539,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_12,
         MapZone = MapZone.DOCKS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_12__bot1,
             Bone_East_12__left1,
@@ -1551,8 +1552,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_East_13,
         MapZone = MapZone.DOCKS,
-        MapArea = MapAreaNames.Far_Fields,
-        TitledArea = TitledAreaNames.Far_Fields,
+        MapArea = MapAreaNames.Deep_Docks,
+        TitledArea = TitledAreaNames.Deep_Docks,
         Gates = new([
             Bone_East_13__left1,
         ]),
