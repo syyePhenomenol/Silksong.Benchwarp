@@ -1903,20 +1903,40 @@ public static class BaseGateList
     public static DoorData Tube_Hub__left1 { get; } = new(new(Tube_Hub, left1), new(Song_Tower_01, right1));
     public static DoorData Tube_Hub__left3 { get; } = new(new(Tube_Hub, left3), new(Cradle_03, right2));
     public static DoorData Tube_Hub__left4 { get; } = new(new(Tube_Hub, left4), new(Cradle_01, right1));
-    public static DoorData Tut_01__left1 { get; } = new(new(Tut_01, left1), new(Tut_03, right1));
+    public static DoorData Tut_01__left1 { get; } = new(new(Tut_01, left1), new(Tut_03, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Moss Vine Cluster (1)", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
+        ])
+    };
     public static DoorData Tut_01__left2 { get; } = new(new(Tut_01, left2), new(Tut_02, right1));
-    public static DoorData Tut_01__left3 { get; } = new(new(Tut_01, left3), new(Tut_02, right2));
+    public static DoorData Tut_01__left3 { get; } = new(new(Tut_01, left3), new(Tut_02, right2))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Moss Vine Cluster", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
+        ])
+    };
     public static DoorData Tut_01__right1 { get; } = new(new(Tut_01, right1), new(Tut_01b, left1));
     public static DoorData Tut_01__right2 { get; } = new(new(Tut_01, right2), new(Tut_01b, left2));
-    public static DoorData Tut_01__top1 { get; } = new(new(Tut_01, top1), new(Bonetown, bot2));
+    public static DoorData Tut_01__top1 { get; } = new(new(Tut_01, top1), new(Bonetown, bot2))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Tutorial Blocker", ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PlayerDataBoolSaveInfo(nameof(PlayerData.churchKeeperIntro)))
+        ])
+    };
     public static DoorData Tut_01b__left1 { get; } = new(new(Tut_01b, left1), new(Tut_01, right1));
     public static DoorData Tut_01b__left2 { get; } = new(new(Tut_01b, left2), new(Tut_01, right2));
     public static DoorData Tut_01b__right1 { get; } = new(new(Tut_01b, right1), new(Weave_04, left1));
     public static DoorData Tut_02__right1 { get; } = new(new(Tut_02, right1), new(Tut_01, left2));
     public static DoorData Tut_02__right2 { get; } = new(new(Tut_02, right2), new(Tut_01, left3));
-    public static DoorData Tut_03__door1_firstExit { get; } = new(new(Tut_03, door1_firstExit), new(Bonetown, bot1_firstEntry), null);
+    // public static DoorData Tut_03__door1_firstExit { get; } = new(new(Tut_03, door1_firstExit), new(Bonetown, bot1_firstEntry), null);
     public static DoorData Tut_03__door1 { get; } = new(new(Tut_03, door1), new(Bonetown, bot1), null);
-    public static DoorData Tut_03__door2 { get; } = new(new(Tut_03, door2), new(Tut_04, left1));
+    public static DoorData Tut_03__door2 { get; } = new(new(Tut_03, door2), new(Tut_04, left1))
+    {
+        Obstacles = new([
+            new TestObjObstacleInfo("Sanctum Door", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.InterruptsEntry | ObstacleSeverity.LimitsExitAccess)
+        ])
+    };
     public static DoorData Tut_03__right1 { get; } = new(new(Tut_03, right1), new(Tut_01, left1));
     public static DoorData Tut_03__top1 { get; } = new(new(Tut_03, top1), new(Bonetown, bot1));
     public static DoorData Tut_04__door_memoryEnd { get; } = new(new(Tut_04, door_memoryEnd));

@@ -27,18 +27,6 @@
 
 The below areas have been checked when using the old door warp coroutine - many issues with softlocks/camera are likely already fixed with the new coroutine.
 
-### Moss_Grotto
-    - Tut_01__left1: collider obstacle.
-    - Tut_01__left3: collider obstacle.
-    - Tut_01__top1: hornet is stuck above the visible area, if the sequence of Hornet passing out when reaching Bone Bottom is not triggered.
-    - Tut_02: credits appear for a split second on the bottom right when entering the scene.
-    - Tut_03: titled area should be Ruined Chapel.
-    - Tut_03__door1: corresponds to the "Ascend" prompt.
-    - Tut_03__door1_firstExit: appears to behave the same as door1. However, the flipped transition is Bonetown__bot1_firstEntry.
-    - Tut_03__door2: Should arrive at the door to the Chapel, but arrives at top1 regardless of whether if in Act 3 or not. Also need to handle door being closed when not Act 3.
-    - Tut_04: titled area should be Ruined Chapel.
-    - Tut_05: titled area should be Ruined Chapel.
-
 ### Greymoor
     - Bellshrine_02__left1: collider obstacle.
     - Bellway_04: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
@@ -483,6 +471,18 @@ The below areas have been checked when using the new door warp coroutine.
     - Dock_15__left2: collider obstacle.
     - Room_Forge__right1: collider obstacle (simple key door).
     - Room_Forge__top1: collider obstacle.
+
+### Moss_Grotto
+    - Tut_01__left1: collider obstacle.
+    - Tut_01__left3: collider obstacle.
+    - Tut_01__top1: hornet is stuck above the visible area, if the sequence of Hornet passing out when reaching Bone Bottom is not triggered.
+    - Tut_02: credits appear for a split second on the bottom right when entering the scene.
+    - Tut_03: titled area should be Ruined Chapel. (redacted, it is outside the "real" chapel)
+    - Tut_03__door1: corresponds to the "Ascend" prompt.
+    - Tut_03__door1_firstExit: appears to behave the same as door1. However, the flipped transition is Bonetown__bot1_firstEntry.
+    - Tut_03__door2: Should arrive at the door to the Chapel, but arrives at top1 regardless of whether if in Act 3 or not. Also need to handle door being closed when not Act 3.
+    - Tut_04: titled area should be Ruined Chapel.
+    - Tut_05: titled area should be Ruined Chapel.
 
 ### Doors with dynamic targets
     - Shadow_04__left1: collider obstacle.

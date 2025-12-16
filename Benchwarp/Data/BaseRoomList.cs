@@ -6155,7 +6155,7 @@ public static class BaseRoomList
         TitledArea = TitledAreaNames.Moss_Grotto,
         Gates = new([
             Tut_03__door1,
-            Tut_03__door1_firstExit,
+            // Tut_03__door1_firstExit,
             Tut_03__door2,
             Tut_03__right1,
             Tut_03__top1,
@@ -6167,7 +6167,7 @@ public static class BaseRoomList
         Name = SceneNames.Tut_04,
         MapZone = MapZone.BONETOWN,
         MapArea = MapAreaNames.Mosslands,
-        TitledArea = TitledAreaNames.Moss_Grotto,
+        TitledArea = TitledAreaNames.Ruined_Chapel,
         Gates = new([
             Tut_04__door_memoryEnd,
             Tut_04__door_ritualEnd,
@@ -6181,7 +6181,7 @@ public static class BaseRoomList
         Name = SceneNames.Tut_05,
         MapZone = MapZone.MOSS_CAVE,
         MapArea = MapAreaNames.Mosslands,
-        TitledArea = TitledAreaNames.Moss_Grotto,
+        TitledArea = TitledAreaNames.Ruined_Chapel,
         Gates = new([
             Tut_05__door_memoryEnd,
             Tut_05__left1,
