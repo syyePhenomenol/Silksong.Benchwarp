@@ -2,6 +2,10 @@
 
 ## Unresolved Notes
 
+Anything that doesn't have ObstacleSaveInfo likely also needs permant obstacle handling.
+
+The following areas have only complex obstacles unhandled.
+
 ### Bone_Bottom
     - Bonegrave__door1: Still needs permanent obstacle handling. Need to handle door staying open when entering from any transition.
     - Bonegrave__left1: Still needs permanent obstacle handling.
@@ -42,19 +46,7 @@
 ### The_Cradle
     - Tube_Hub: Act 3 blocked transitions are handled by reverting world state to pre-Act 3. Might be a better way to handle it?
 
-(I got lazy with documenting permanent obstacle handling - basically anything that doesn't have an ObstacleSaveInfo needs to be reverified).
-
-The below areas have been checked when using the old door warp coroutine - many issues with softlocks/camera are likely already fixed with the new coroutine.
-
-### Bellhart
-    - Belltown__door3/door4/door5: Spawns hornet in the middle of the scene. Not sure if this always happens or it depends on saving the town/Act 3 or a combination of both.
-    - Belltown_04__left2: collider obstacle.
-    - Belltown_basement: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
-    - Belltown_Room_doctor: map/titled area should be Greymoor.
-    - Belltown_Room_fisher: this room doesn't seem to exist. Attempting to door warp here softlocks the game.
-    - Belltown_Room_shellwood: map/titled area should be Shellwood.
-
-The below areas have been checked when using the new door warp coroutine.
+The following areas have not been handled at all:
 
 ### Cogwork_Core
     - Cog_06__right1: collider obstacle.
@@ -500,6 +492,14 @@ The below areas have been checked when using the new door warp coroutine.
 ### The_Cradle
     - Cradle_02__left2: collider obstacle.
     - Tube_Hub: in Act 3 only, all three transition gates are blocked.
+
+### Bellhart
+    - Belltown__door3/door4/door5: Spawns hornet in the middle of the scene. Not sure if this always happens or it depends on saving the town/Act 3 or a combination of both.
+    - Belltown_04__left2: collider obstacle.
+    - Belltown_basement: game softlocks if door warping to this scene during Act 3 if bell beast fast travel isn't unlocked.
+    - Belltown_Room_doctor: map/titled area should be Greymoor.
+    - Belltown_Room_fisher: this room doesn't seem to exist. Attempting to door warp here softlocks the game.
+    - Belltown_Room_shellwood: map/titled area should be Shellwood.
 
 ### Doors with dynamic targets
     - Shadow_04__left1: collider obstacle.

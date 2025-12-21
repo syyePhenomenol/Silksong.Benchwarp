@@ -5,8 +5,8 @@ namespace Benchwarp.Doors.Obstacles;
 /// <summary>
 /// An <see cref="ObstacleInfo"/> of which toggling a TestGameObjectActivator's GameObjects affects the obstacle.
 /// </summary>
-public record TestObjObstacleInfo(string ObjPath, bool Activate, ObstacleType Type, ObstacleSeverity Severity, ObstacleSaveInfo? SaveInfo = null)
-    : BehaviourObstacleInfo<TestGameObjectActivator>(ObjPath, Activate, Type, Severity, SaveInfo)
+public record TestObjObstacleInfo(string ObjPath, bool Activate, ObstacleType Type, ObstacleSeverity Severity, ObstacleSaveInfo? SaveInfo = null, int Index = 0)
+    : BehaviourObstacleInfo<TestGameObjectActivator>(ObjPath, Activate, Type, Severity, SaveInfo, Index)
 {
     public override void Open(Scene scene)
     {

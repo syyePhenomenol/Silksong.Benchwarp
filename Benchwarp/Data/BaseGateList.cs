@@ -286,15 +286,58 @@ public static class BaseGateList
     };
     public static DoorData Bellshrine_Coral__left1 { get; } = new(new(Bellshrine_Coral, left1), new(Coral_38, right1));
     public static DoorData Bellshrine_Enclave__left1 { get; } = new(new(Bellshrine_Enclave, left1), new(Song_Enclave, door1));
-    public static DoorData Belltown__door1 { get; } = new(new(Belltown, door1), new(Belltown_basement, left1));
-    public static DoorData Belltown__door3 { get; } = new(new(Belltown, door3), new(Belltown_Room_pinsmith, left1));
-    public static DoorData Belltown__door4 { get; } = new(new(Belltown, door4), new(Belltown_Room_Relic, left1));
-    public static DoorData Belltown__door5 { get; } = new(new(Belltown, door5), new(Belltown_Room_Spare, left1));
-    public static DoorData Belltown__left3 { get; } = new(new(Belltown, left3), new(Belltown_07, right1));
-    public static DoorData Belltown__right2 { get; } = new(new(Belltown, right2), new(Belltown_06, left1));
+    public static DoorData Belltown__door1 { get; } = new(new(Belltown, door1), new(Belltown_basement, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Cutscene Loader", ObstacleType.Cutscene, ObstacleSeverity.ModifiesSaveData)
+        ])
+    };
+    public static DoorData Belltown__door3 { get; } = new(new(Belltown, door3), new(Belltown_Room_pinsmith, left1))
+    {
+        Obstacles = new([
+            new TestObjObstacleInfo("hanging_bell_house_Pinsmith", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess | ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Cutscene Loader", ObstacleType.Cutscene, ObstacleSeverity.ModifiesSaveData)
+        ])
+    };
+    public static DoorData Belltown__door4 { get; } = new(new(Belltown, door4), new(Belltown_Room_Relic, left1))
+    {
+        Obstacles = new([
+            new TestObjObstacleInfo("hanging_bell_house 2", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess | ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Cutscene Loader", ObstacleType.Cutscene, ObstacleSeverity.ModifiesSaveData)
+        ])
+    };
+    public static DoorData Belltown__door5 { get; } = new(new(Belltown, door5), new(Belltown_Room_Spare, left1))
+    {
+        Obstacles = new([
+            new BehaviourObstacleInfo<TestGameObjectActivator>("Hornet House States", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess | ObstacleSeverity.AbnormalVisual, Index: 0),
+            new BehaviourObstacleInfo<TestGameObjectActivator>("Hornet House States", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess | ObstacleSeverity.AbnormalVisual, Index: 1),
+            new BehaviourObstacleInfo<TestGameObjectActivator>("Hornet House States", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess | ObstacleSeverity.AbnormalVisual, Index: 2),
+            new GameObjectActiveObstacleInfo("Hornet House States/Full", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess | ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Hornet House States/Door Lock", ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+            new TransitionObstacleInfo("Hornet House States/door5", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+            new ObstacleInfo("Cutscene Loader", ObstacleType.Cutscene, ObstacleSeverity.ModifiesSaveData)
+        ])
+    };
+    public static DoorData Belltown__left3 { get; } = new(new(Belltown, left3), new(Belltown_07, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Cutscene Loader", ObstacleType.Cutscene, ObstacleSeverity.ModifiesSaveData)
+        ])
+    };
+    public static DoorData Belltown__right2 { get; } = new(new(Belltown, right2), new(Belltown_06, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Cutscene Loader", ObstacleType.Cutscene, ObstacleSeverity.ModifiesSaveData)
+        ])
+    };
     public static DoorData Belltown_04__bot1 { get; } = new(new(Belltown_04, bot1), new(Belltown_Shrine, top1));
     public static DoorData Belltown_04__left1 { get; } = new(new(Belltown_04, left1), new(Shellwood_13, right1));
-    public static DoorData Belltown_04__left2 { get; } = new(new(Belltown_04, left2), new(Shellwood_15, right1));
+    public static DoorData Belltown_04__left2 { get; } = new(new(Belltown_04, left2), new(Shellwood_15, right1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Bell Wall Tall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo()),
+            ]),
+    };
     public static DoorData Belltown_06__door1 { get; } = new(new(Belltown_06, door1), new(Belltown_Room_Fisher, right1), null);
     public static DoorData Belltown_06__left1 { get; } = new(new(Belltown_06, left1), new(Belltown, right2));
     public static DoorData Belltown_06__left3 { get; } = new(new(Belltown_06, left3), new(Belltown_Shrine, right1));
@@ -308,7 +351,7 @@ public static class BaseGateList
     public static DoorData Belltown_basement_03__left1 { get; } = new(new(Belltown_basement_03, left1), new(Bone_08, right2));
     public static DoorData Belltown_basement_03__top1 { get; } = new(new(Belltown_basement_03, top1), new(Belltown_basement, bot1));
     public static DoorData Belltown_Room_doctor__left1 { get; } = new(new(Belltown_Room_doctor, left1), new(Wisp_03, door1));
-    public static DoorData Belltown_Room_Fisher__right1 { get; } = new(new(Belltown_Room_Fisher, right1), null, new(Belltown_06, door1));
+    // public static DoorData Belltown_Room_Fisher__right1 { get; } = new(new(Belltown_Room_Fisher, right1), null, new(Belltown_06, door1));
     public static DoorData Belltown_Room_pinsmith__left1 { get; } = new(new(Belltown_Room_pinsmith, left1), new(Belltown, door3));
     public static DoorData Belltown_Room_Relic__left1 { get; } = new(new(Belltown_Room_Relic, left1), new(Belltown, door4));
     public static DoorData Belltown_Room_shellwood__left1 { get; } = new(new(Belltown_Room_shellwood, left1), new(Shellwood_01, right1));

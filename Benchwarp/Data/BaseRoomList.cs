@@ -808,24 +808,24 @@ public static class BaseRoomList
     {
         Name = SceneNames.Belltown_Room_doctor,
         MapZone = MapZone.GREYMOOR,
-        MapArea = MapAreaNames.Bellhart,
-        TitledArea = TitledAreaNames.Bellhart,
+        MapArea = MapAreaNames.Greymoor,
+        TitledArea = TitledAreaNames.Greymoor,
         Gates = new([
             Belltown_Room_doctor__left1,
         ]),
         ManuallyVerified = true,
     };
-    public static RoomData Belltown_Room_Fisher { get; } = new RoomData
-    {
-        Name = SceneNames.Belltown_Room_Fisher,
-        MapZone = MapZone.NONE,
-        MapArea = MapAreaNames.Bellhart,
-        TitledArea = TitledAreaNames.Bellhart,
-        Gates = new([
-            Belltown_Room_Fisher__right1,
-        ]),
-        ManuallyVerified = true,
-    };
+    // public static RoomData Belltown_Room_Fisher { get; } = new RoomData
+    // {
+    //     Name = SceneNames.Belltown_Room_Fisher,
+    //     MapZone = MapZone.NONE,
+    //     MapArea = MapAreaNames.Bellhart,
+    //     TitledArea = TitledAreaNames.Bellhart,
+    //     Gates = new([
+    //         Belltown_Room_Fisher__right1,
+    //     ]),
+    //     ManuallyVerified = true,
+    // };
     public static RoomData Belltown_Room_pinsmith { get; } = new RoomData
     {
         Name = SceneNames.Belltown_Room_pinsmith,
@@ -852,8 +852,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Belltown_Room_shellwood,
         MapZone = MapZone.BELLTOWN,
-        MapArea = MapAreaNames.Bellhart,
-        TitledArea = TitledAreaNames.Bellhart,
+        MapArea = MapAreaNames.Shellwood,
+        TitledArea = TitledAreaNames.Shellwood,
         Gates = new([
             Belltown_Room_shellwood__left1,
         ]),
