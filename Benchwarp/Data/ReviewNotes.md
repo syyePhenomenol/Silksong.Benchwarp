@@ -46,14 +46,11 @@ The following areas have only complex obstacles unhandled.
 ### The_Cradle
     - Tube_Hub: Act 3 blocked transitions are handled by reverting world state to pre-Act 3. Might be a better way to handle it?
 
-The following areas have not been handled at all:
-
 ### Cogwork_Core
-    - Cog_06__right1: collider obstacle.
-    - Cog_Dancers__bot1: collider obstacle, only when not in Act 3.
-    - Cog_Dancers__bot2: collider obstacle, only when not in Act 3.
-    - Cog_Dancers__top1: collider obstacle. Different objects in Act 3.
-    - Cog_11_Destroyed__left1: attempting to door warp here softlocks the game, regardless of Act 3 or not. The scene probably doesn't exist.
+    - Cog_Dancers__bot1: collider obstacle, if Cogwork Dancers isn't defeated. Not handled whatsoever at the moment due to the Cogwork Dancers boss being affected.
+    - Cog_Dancers__bot2: collider obstacle, if Cogwork Dancers isn't defeated. Not handled whatsoever at the moment due to the Cogwork Dancers boss being affected.
+
+The following areas have not been handled at all:
 
 ### Sinner's_Road
     - Dust_02__right1: collider obstacle.
@@ -500,6 +497,11 @@ The following areas have not been handled at all:
     - Belltown_Room_doctor: map/titled area should be Greymoor.
     - Belltown_Room_fisher: this room doesn't seem to exist. Attempting to door warp here softlocks the game.
     - Belltown_Room_shellwood: map/titled area should be Shellwood.
+
+### Cogwork_Core
+    - Cog_06__right1: collider obstacle.
+    - Cog_Dancers__top1: collider obstacle. Different objects in Act 3.
+    - Cog_11_Destroyed__left1: attempting to door warp here softlocks the game, regardless of Act 3 or not. The scene probably doesn't exist.
 
 ### Doors with dynamic targets
     - Shadow_04__left1: collider obstacle.

@@ -2146,17 +2146,17 @@ public static class BaseRoomList
         ]),
         ManuallyVerified = true,
     };
-    public static RoomData Cog_11_Destroyed { get; } = new RoomData
-    {
-        Name = SceneNames.Cog_11_Destroyed,
-        MapZone = MapZone.NONE,
-        MapArea = MapAreaNames.Cogwork_Core,
-        TitledArea = TitledAreaNames.Cogwork_Core,
-        Gates = new([
-            Cog_11_Destroyed__left1,
-        ]),
-        ManuallyVerified = true,
-    };
+    // public static RoomData Cog_11_Destroyed { get; } = new RoomData
+    // {
+    //     Name = SceneNames.Cog_11_Destroyed,
+    //     MapZone = MapZone.NONE,
+    //     MapArea = MapAreaNames.Cogwork_Core,
+    //     TitledArea = TitledAreaNames.Cogwork_Core,
+    //     Gates = new([
+    //         Cog_11_Destroyed__left1,
+    //     ]),
+    //     ManuallyVerified = true,
+    // };
     public static RoomData Cog_Bench { get; } = new RoomData
     {
         Name = SceneNames.Cog_Bench,

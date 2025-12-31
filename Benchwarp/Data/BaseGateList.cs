@@ -858,7 +858,15 @@ public static class BaseGateList
     public static DoorData Cog_05__right2 { get; } = new(new(Cog_05, right2), new(Cog_04, left2));
     public static DoorData Cog_05__top1 { get; } = new(new(Cog_05, top1), new(Cog_10, bot1));
     public static DoorData Cog_06__left2 { get; } = new(new(Cog_06, left2), new(Cog_04, right2));
-    public static DoorData Cog_06__right1 { get; } = new(new(Cog_06, right1), new(Song_20b, left4));
+    public static DoorData Cog_06__right1 { get; } = new(new(Cog_06, right1), new(Song_20b, left4))
+    {
+        Obstacles = new([
+            new BehaviourObstacleInfo<Animator>("cog_door_open", false, ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(ID: "cog_lever")),
+            new GameObjectActiveObstacleInfo("cog_door_open/terrain collider", false, ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess),
+            new GameObjectActiveObstacleInfo("cog_door_open/front_ver", false, ObstacleType.Other, ObstacleSeverity.AbnormalVisual),
+            new GameObjectActiveObstacleInfo("cog_door_open/back_ver", true, ObstacleType.Other, ObstacleSeverity.AbnormalVisual)
+        ])
+    };
     public static DoorData Cog_07__left1 { get; } = new(new(Cog_07, left1), new(Cog_04, right3));
     public static DoorData Cog_08__bot1 { get; } = new(new(Cog_08, bot1), new(Cog_Dancers, top1));
     public static DoorData Cog_08__top1 { get; } = new(new(Cog_08, top1), new(Cog_09, bot1));
@@ -868,15 +876,37 @@ public static class BaseGateList
     public static DoorData Cog_10__bot1 { get; } = new(new(Cog_10, bot1), new(Cog_05, top1));
     public static DoorData Cog_10_Destroyed__bot1 { get; } = new(new(Cog_10_Destroyed, bot1), new(Song_25, top2));
     public static DoorData Cog_10_Destroyed__left1 { get; } = new(new(Cog_10_Destroyed, left1), new(Cog_09_Destroyed, right1));
-    public static DoorData Cog_11_Destroyed__left1 { get; } = new(new(Cog_11_Destroyed, left1), null, new(Hang_08, right2));
+    // public static DoorData Cog_11_Destroyed__left1 { get; } = new(new(Cog_11_Destroyed, left1), null, new(Hang_08, right2));
     public static DoorData Cog_Bench__left1 { get; } = new(new(Cog_Bench, left1), new(Cog_04, door1));
     public static DoorData Cog_Dancers__bot1 { get; } = new(new(Cog_Dancers, bot1), new(Cog_04, top1));
+    // {
+    //     Obstacles = new([
+    //         new BehaviourObstacleInfo<PlayMakerFSM>("Boss Scene/Battle Gates/gate ground", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+    //         new BehaviourObstacleInfo<Animator>("Boss Scene/Battle Gates/gate ground/Cog Dancers Trapdoor", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+    //         new ObstacleInfo("Boss Scene/Battle Gates/gate ground/ground consistency terrain collider", ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+    //         new GameObjectActiveObstacleInfo("Boss Scene/Battle Gates/gate ground/ground mid terrain collider", true, ObstacleType.Other, ObstacleSeverity.AbnormalVisual)
+    //     ])
+    // };
     public static DoorData Cog_Dancers__bot2 { get; } = new(new(Cog_Dancers, bot2), new(Cog_04, top2));
+    // {
+    //     Obstacles = new([
+    //         new BehaviourObstacleInfo<Gate>("Boss Scene/Battle Gates/gate ground/Cog Dancers Trapdoor (1)", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+    //         new BehaviourObstacleInfo<Animator>("Boss Scene/Battle Gates/gate ground/Cog Dancers Trapdoor (1)", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+    //         new ObstacleInfo("Boss Scene/Battle Gates/gate ground/ground consistency terrain collider", ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+    //         new GameObjectActiveObstacleInfo("Boss Scene/Battle Gates/gate ground/ground mid terrain collider", true, ObstacleType.Other, ObstacleSeverity.AbnormalVisual)
+    //     ])
+    // };
     public static DoorData Cog_Dancers__door_arriveFromTower { get; } = new(new(Cog_Dancers, door_arriveFromTower));
     public static DoorData Cog_Dancers__door1 { get; } = new(new(Cog_Dancers, door1), new(Cog_Pass, left1));
     public static DoorData Cog_Dancers__left1 { get; } = new(new(Cog_Dancers, left1), new(Hang_07, right1));
     public static DoorData Cog_Dancers__right1 { get; } = new(new(Cog_Dancers, right1), new(Song_25, left1));
-    public static DoorData Cog_Dancers__top1 { get; } = new(new(Cog_Dancers, top1), new(Cog_08, bot1));
+    public static DoorData Cog_Dancers__top1 { get; } = new(new(Cog_Dancers, top1), new(Cog_08, bot1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Black Thread States/Normal World/harpoon_ring_gate/slide_gate_trapdoor", ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(ID: "slide_gate_ring")),
+            new ObstacleInfo("Boss Scene/Battle Gates/gate ground/hero blocker top", ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsRoomAccess)
+        ])
+    };
     public static DoorData Cog_Pass__left1 { get; } = new(new(Cog_Pass, left1), new(Cog_Dancers, door1));
     public static DoorData Cog_Pass__left2 { get; } = new(new(Cog_Pass, left2), new(Cog_04, door2));
     public static DoorData Coral_02__bot2 { get; } = new(new(Coral_02, bot2), new(Coral_19, top2));
