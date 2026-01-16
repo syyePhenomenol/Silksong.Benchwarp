@@ -4,7 +4,7 @@
 
 Anything that doesn't have ObstacleSaveInfo likely also needs permant obstacle handling.
 
-The following areas have only complex obstacles unhandled.
+The following areas have obstacles unhandled to some extent.
 
 ### Bone_Bottom
     - Bonegrave__door1: Still needs permanent obstacle handling. Need to handle door staying open when entering from any transition.
@@ -62,21 +62,6 @@ The following areas have only complex obstacles unhandled.
     - Ward_06__bot1: Fully unhandled for now, because entering the scene this way forces Hornet into a hazard.
 
 The following areas have not been handled at all:
-
-### Whispering_Vaults
-    - Library_01__left3: collider obstacle.
-    - Library_03: map/titled area for LEFT SIDE corresponds to Choral Chambers, and RIGHT SIDE is Whispering Vaults.
-    - Library_04__right1: collider obstacle.
-    - Library_04__top1: collider obstacle.
-    - Library_07__bot1/bot2/bot3: big bot transition at three different points.
-    - Library_07__top1: obstacles on floor on entry. Keep or remove?
-    - Library_11: map/titled area should be Underworks.
-    - Library_11__left3: collider obstacle.
-    - Library_11b: map/titled area should be Underworks.
-    - Library_11b__right1: collider obstacle.
-    - Library_12: map/titled area should be Underworks.
-    - Library_12__right1: collider obstacle.
-    - Library_12b: map/titled area should be Underworks.
 
 ### The_Slab
     - Slab_02__left1: collider obstacle.
@@ -460,6 +445,21 @@ The following areas have not been handled at all:
     - Cog_06__right1: collider obstacle.
     - Cog_Dancers__top1: collider obstacle. Different objects in Act 3.
     - Cog_11_Destroyed__left1: attempting to door warp here softlocks the game, regardless of Act 3 or not. The scene probably doesn't exist.
+
+### Whispering_Vaults
+    - Library_01__left3: collider obstacle.
+    - Library_03: map/titled area for LEFT SIDE corresponds to Choral Chambers, and RIGHT SIDE is Whispering Vaults.
+    - Library_04__right1: collider obstacle.
+    - Library_04__top1: collider obstacle.
+    - Library_07__bot1/bot2/bot3: big bot transition at three different points.
+    - Library_07__top1: obstacles on floor on entry. Keep or remove?
+    - Library_11: map/titled area should be Underworks.
+    - Library_11__left3: collider obstacle.
+    - Library_11b: map/titled area should be Underworks.
+    - Library_11b__right1: collider obstacle.
+    - Library_12: map/titled area should be Underworks.
+    - Library_12__right1: collider obstacle.
+    - Library_12b: map/titled area should be Underworks.
 
 ### Sinner's_Road
     - Dust_02__right1: collider obstacle.

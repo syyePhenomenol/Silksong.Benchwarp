@@ -1624,7 +1624,12 @@ public static class BaseGateList
     public static DoorData Last_Dive_Return__door_cutscenePosition { get; } = new(new(Last_Dive_Return, door_cutscenePosition));
     public static DoorData Library_01__left1 { get; } = new(new(Library_01, left1), new(Library_02, right1));
     public static DoorData Library_01__left2 { get; } = new(new(Library_01, left2), new(Library_03, right1));
-    public static DoorData Library_01__left3 { get; } = new(new(Library_01, left3), new(Library_15, right1));
+    public static DoorData Library_01__left3 { get; } = new(new(Library_01, left3), new(Library_15, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Black Thread States/Normal World/Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo()),
+        ])
+    };
     public static DoorData Library_01__right1 { get; } = new(new(Library_01, right1), new(Library_04, left1));
     public static DoorData Library_01__right2 { get; } = new(new(Library_01, right2), new(Library_04, left2));
     public static DoorData Library_02__left1 { get; } = new(new(Library_02, left1), new(Song_20b, right3));
@@ -1637,13 +1642,24 @@ public static class BaseGateList
     public static DoorData Library_04__left2 { get; } = new(new(Library_04, left2), new(Library_01, right2));
     public static DoorData Library_04__left3 { get; } = new(new(Library_04, left3), new(Library_13b, right1));
     public static DoorData Library_04__left4 { get; } = new(new(Library_04, left4), new(Library_16, right1));
-    public static DoorData Library_04__right1 { get; } = new(new(Library_04, right1), new(Library_09, left1));
+    public static DoorData Library_04__right1 { get; } = new(new(Library_04, right1), new(Library_09, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("secret wall library slide/closed", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PlayerDataBoolSaveInfo(nameof(PlayerData.libraryRoofShortcut))),
+        ])
+    };
     public static DoorData Library_04__right2 { get; } = new(new(Library_04, right2), new(Library_08, left1));
     public static DoorData Library_04__right3 { get; } = new(new(Library_04, right3), new(Library_05, left1));
     public static DoorData Library_04__right4 { get; } = new(new(Library_04, right4), new(Library_05, left2));
     public static DoorData Library_04__right5 { get; } = new(new(Library_04, right5), new(Library_10, left1));
     public static DoorData Library_04__right6 { get; } = new(new(Library_04, right6), new(Library_14, left1));
-    public static DoorData Library_04__top1 { get; } = new(new(Library_04, top1), new(Song_Enclave, bot1));
+    public static DoorData Library_04__top1 { get; } = new(new(Library_04, top1), new(Song_Enclave, bot1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("shortcut/One Way Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.InterruptsEntry, new PersistentBoolSaveInfo(ID: "Top Shortcut")),
+            new GameObjectActiveObstacleInfo("shortcut/after_wall_glows", true, ObstacleType.Other, ObstacleSeverity.AbnormalVisual),
+        ])
+    };
     public static DoorData Library_05__left1 { get; } = new(new(Library_05, left1), new(Library_04, right3));
     public static DoorData Library_05__left2 { get; } = new(new(Library_05, left2), new(Library_04, right4));
     public static DoorData Library_05__right1 { get; } = new(new(Library_05, right1), new(Library_06, left1));
@@ -1665,15 +1681,41 @@ public static class BaseGateList
     public static DoorData Library_10__left1 { get; } = new(new(Library_10, left1), new(Library_04, right5));
     public static DoorData Library_11__left1 { get; } = new(new(Library_11, left1), new(Library_13, right2));
     public static DoorData Library_11__left2 { get; } = new(new(Library_11, left2), new(Bellway_City, right1));
-    public static DoorData Library_11__left3 { get; } = new(new(Library_11, left3), new(Library_11b, right1));
+    public static DoorData Library_11__left3 { get; } = new(new(Library_11, left3), new(Library_11b, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Understore Big Plate Gate/terrain collider whole", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(ID: "Understore Big Plate Gate")),
+            new ObstacleInfo("Understore Big Plate Gate/Lever", ObstacleType.Other, ObstacleSeverity.LimitsVisibility),
+            new ObstacleInfo("Understore Big Plate Gate/Mid Joiner", ObstacleType.Other,  ObstacleSeverity.LimitsVisibility),
+            new ObstacleInfo("Understore Big Plate Gate/Back Strut Top F", ObstacleType.Other,  ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Understore Big Plate Gate/Back Strut Top B", ObstacleType.Other,  ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Understore Big Plate Gate/Plate Top 1", ObstacleType.Other,  ObstacleSeverity.LimitsVisibility),
+            new ObstacleInfo("Understore Big Plate Gate/Plate Bot 1", ObstacleType.Other, ObstacleSeverity.LimitsVisibility),
+            new ObstacleInfo("Understore Big Plate Gate/Block Top", ObstacleType.Other, ObstacleSeverity.LimitsVisibility),
+            new ObstacleInfo("Understore Big Plate Gate/Block Bot", ObstacleType.Other, ObstacleSeverity.LimitsVisibility),
+            new ObstacleInfo("Understore Big Plate Gate/Back Plate Top 1", ObstacleType.Other, ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Understore Big Plate Gate/Back Plate Bot 1", ObstacleType.Other, ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Understore Big Plate Gate/Masks", ObstacleType.Other, ObstacleSeverity.LimitsVisibility),
+        ])
+    };
     public static DoorData Library_11__right1 { get; } = new(new(Library_11, right1), new(Library_12, left1));
     public static DoorData Library_11__right2 { get; } = new(new(Library_11, right2), new(Library_12, left2));
     public static DoorData Library_11b__left3 { get; } = new(new(Library_11b, left3), new(Under_17, right1));
-    public static DoorData Library_11b__right1 { get; } = new(new(Library_11b, right1), new(Library_11, left3));
+    public static DoorData Library_11b__right1 { get; } = new(new(Library_11b, right1), new(Library_11, left3))
+    {
+        Obstacles = new([
+            new ObstacleInfo("door states (1)/Understore Big Plate Gate", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(SceneName: Library_11)),
+        ])
+    };
     public static DoorData Library_12__door1 { get; } = new(new(Library_12, door1), new(Organ_01, left3));
     public static DoorData Library_12__left1 { get; } = new(new(Library_12, left1), new(Library_11, right1));
     public static DoorData Library_12__left2 { get; } = new(new(Library_12, left2), new(Library_11, right2));
-    public static DoorData Library_12__right1 { get; } = new(new(Library_12, right1), new(Library_12b, left1));
+    public static DoorData Library_12__right1 { get; } = new(new(Library_12, right1), new(Library_12b, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("breakable blocker struts", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo()),
+        ])
+    };
     public static DoorData Library_12b__left1 { get; } = new(new(Library_12b, left1), new(Library_12, right1));
     public static DoorData Library_12b__top1 { get; } = new(new(Library_12b, top1), new(Library_10, bot1));
     public static DoorData Library_13__left1 { get; } = new(new(Library_13, left1), new(Song_20, right5));

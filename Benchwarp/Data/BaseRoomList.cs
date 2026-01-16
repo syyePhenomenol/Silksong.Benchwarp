@@ -4067,8 +4067,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Library_11,
         MapZone = MapZone.LIBRARY,
-        MapArea = MapAreaNames.Whispering_Vaults,
-        TitledArea = TitledAreaNames.Whispering_Vaults,
+        MapArea = MapAreaNames.Underworks,
+        TitledArea = TitledAreaNames.Underworks,
         Gates = new([
             Library_11__left1,
             Library_11__left2,
@@ -4082,8 +4082,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Library_11b,
         MapZone = MapZone.DUSTPENS,
-        MapArea = MapAreaNames.Whispering_Vaults,
-        TitledArea = TitledAreaNames.Whispering_Vaults,
+        MapArea = MapAreaNames.Underworks,
+        TitledArea = TitledAreaNames.Underworks,
         Gates = new([
             Library_11b__left3,
             Library_11b__right1,
@@ -4094,8 +4094,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Library_12,
         MapZone = MapZone.LIBRARY,
-        MapArea = MapAreaNames.Whispering_Vaults,
-        TitledArea = TitledAreaNames.Whispering_Vaults,
+        MapArea = MapAreaNames.Underworks,
+        TitledArea = TitledAreaNames.Underworks,
         Gates = new([
             Library_12__door1,
             Library_12__left1,
@@ -4108,8 +4108,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Library_12b,
         MapZone = MapZone.LIBRARY,
-        MapArea = MapAreaNames.Whispering_Vaults,
-        TitledArea = TitledAreaNames.Whispering_Vaults,
+        MapArea = MapAreaNames.Underworks,
+        TitledArea = TitledAreaNames.Underworks,
         Gates = new([
             Library_12b__left1,
             Library_12b__top1,
