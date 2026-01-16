@@ -267,7 +267,12 @@ public static class BaseGateList
     public static DoorData Aspid_01__top6 { get; } = new(new(Aspid_01, top6), new(Coral_19, bot6), null);
     public static DoorData Aspid_01__top7 { get; } = new(new(Aspid_01, top7), new(Coral_19, bot7), null);
     public static DoorData Bellshrine__left1 { get; } = new(new(Bellshrine, left1), new(Bone_05, right1));
-    public static DoorData Bellshrine__right1 { get; } = new(new(Bellshrine, right1), new(Bone_03, left1));
+    public static DoorData Bellshrine__right1 { get; } = new(new(Bellshrine, right1), new(Bone_03, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Whole Scene/bellshrine_gate_curved", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess, new PlayerDataBoolSaveInfo(nameof(PlayerData.bellShrineBoneForest)))
+        ])
+    };
     public static DoorData Bellshrine_02__left1 { get; } = new(new(Bellshrine_02, left1), new(Greymoor_01, right2))
     {
         Obstacles = new([
@@ -412,11 +417,23 @@ public static class BaseGateList
     public static DoorData Bellway_Shadow__door_fastTravelExit { get; } = new(new(Bellway_Shadow, door_fastTravelExit));
     public static DoorData Bellway_Shadow__left1 { get; } = new(new(Bellway_Shadow, left1), new(Shadow_04, right2));
     public static DoorData Bone_01__left2 { get; } = new(new(Bone_01, left2), new(Bonetown, right2));
-    public static DoorData Bone_01__right1 { get; } = new(new(Bone_01, right1), new(Bone_01c, left1));
+    public static DoorData Bone_01__right1 { get; } = new(new(Bone_01, right1), new(Bone_01c, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo()),
+            new UnmaskerInfo("Masks")
+        ])
+    };
     public static DoorData Bone_01__right2 { get; } = new(new(Bone_01, right2), new(Bone_01c, left2));
-    public static DoorData Bone_01__top2_extra { get; } = new(new(Bone_01, top2_extra), new(Bone_04, bot2), null);
+    //public static DoorData Bone_01__top2_extra { get; } = new(new(Bone_01, top2_extra), new(Bone_04, bot2), null);
     public static DoorData Bone_01__top2 { get; } = new(new(Bone_01, top2), new(Bone_04, bot2));
-    public static DoorData Bone_01b__left1 { get; } = new(new(Bone_01b, left1), new(Bone_11b, right1));
+    public static DoorData Bone_01b__left1 { get; } = new(new(Bone_01b, left1), new(Bone_11b, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo()),
+            new UnmaskerInfo("Masks")
+        ])
+    };
     public static DoorData Bone_01b__left2 { get; } = new(new(Bone_01b, left2), new(Bonetown, right1));
     public static DoorData Bone_01c__left1 { get; } = new(new(Bone_01c, left1), new(Bone_01, right1));
     public static DoorData Bone_01c__left2 { get; } = new(new(Bone_01c, left2), new(Bone_01, right2));
@@ -426,7 +443,12 @@ public static class BaseGateList
     public static DoorData Bone_02__top1 { get; } = new(new(Bone_02, top1), new(Bone_03, bot1));
     public static DoorData Bone_02__top2 { get; } = new(new(Bone_02, top2), new(Bone_10, bot1));
     public static DoorData Bone_03__bot1 { get; } = new(new(Bone_03, bot1), new(Bone_02, top1));
-    public static DoorData Bone_03__left1 { get; } = new(new(Bone_03, left1), new(Bellshrine, right1));
+    public static DoorData Bone_03__left1 { get; } = new(new(Bone_03, left1), new(Bellshrine, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Bellshrine gate", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess, new PlayerDataBoolSaveInfo(nameof(PlayerData.bellShrineBoneForest)))
+        ])
+    };
     public static DoorData Bone_03__left2 { get; } = new(new(Bone_03, left2), new(Bone_04, right1));
     public static DoorData Bone_03__left4 { get; } = new(new(Bone_03, left4), new(Bone_17, right1));
     public static DoorData Bone_03__right1 { get; } = new(new(Bone_03, right1), new(Bone_14, left1));
@@ -445,7 +467,12 @@ public static class BaseGateList
     public static DoorData Bone_05b__left1 { get; } = new(new(Bone_05b, left1), new(Mosstown_01, right2));
     public static DoorData Bone_05b__top1 { get; } = new(new(Bone_05b, top1), new(Mosstown_02, bot2));
     public static DoorData Bone_06__bot1 { get; } = new(new(Bone_06, bot1), new(Bone_03, top1));
-    public static DoorData Bone_06__left1 { get; } = new(new(Bone_06, left1), new(Mosstown_03, right1));
+    public static DoorData Bone_06__left1 { get; } = new(new(Bone_06, left1), new(Mosstown_03, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Bone_face_shortcut", ObstacleType.OneWayBreakableExit, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PlayerDataBoolSaveInfo(nameof(PlayerData.explodeWallMosstown3)))
+        ])
+    };
     public static DoorData Bone_06__right1 { get; } = new(new(Bone_06, right1), new(Bone_18, left1));
     public static DoorData Bone_07__left1 { get; } = new(new(Bone_07, left1), new(Bone_14, right1));
     public static DoorData Bone_07__right1 { get; } = new(new(Bone_07, right1), new(Bone_08, left2));
@@ -462,16 +489,40 @@ public static class BaseGateList
     public static DoorData Bone_09__right2 { get; } = new(new(Bone_09, right2), new(Dock_08, left2));
     public static DoorData Bone_09__top1 { get; } = new(new(Bone_09, top1), new(Bone_08, bot1));
     public static DoorData Bone_10__bot1 { get; } = new(new(Bone_10, bot1), new(Bone_02, top2));
-    public static DoorData Bone_10__door2 { get; } = new(new(Bone_10, door2), new(Room_Caravan_Spa, left1), null);
+    public static DoorData Bone_10__door2 { get; } = new(new(Bone_10, door2), new(Room_Caravan_Spa, left1), null)
+    {
+        Obstacles = new([
+            new BehaviourObstacleInfo<DeactivatePlayerDataTest>("Black Thread States Thread Only Variant/Normal World/Caravan", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+            new BehaviourObstacleInfo<DeactivateIfPlayerdataFalse>("Black Thread States Thread Only Variant/Normal World/Caravan/Caravan_Spa", false, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess),
+            new TransitionObstacleInfo("Black Thread States Thread Only Variant/Normal World/Caravan/Caravan_Spa/door2", true, ObstacleType.OpenAfterProgression, ObstacleSeverity.LimitsExitAccess)
+        ])
+    };
     public static DoorData Bone_10__left1 { get; } = new(new(Bone_10, left1), new(Bone_03, right3));
     public static DoorData Bone_10__right1 { get; } = new(new(Bone_10, right1), new(Bone_15, left1));
-    public static DoorData Bone_11__bot1 { get; } = new(new(Bone_11, bot1), new(Bone_11b, top1));
+    public static DoorData Bone_11__bot1 { get; } = new(new(Bone_11, bot1), new(Bone_11b, top1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Plaza_closed", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsExitAccess, new PlayerDataBoolSaveInfo(nameof(PlayerData.BonePlazaOpened))),
+            new BehaviourObstacleInfo<DeactivatePlayerDataTest>("Plaza_open", false, ObstacleType.Other, ObstacleSeverity.AbnormalVisual),
+            new ObstacleInfo("Pilgrim 03 (1)", ObstacleType.Other, ObstacleSeverity.AbnormalVisual)
+        ])
+    };
     public static DoorData Bone_11__left1 { get; } = new(new(Bone_11, left1), new(Aspid_01, right4));
     public static DoorData Bone_11__right1 { get; } = new(new(Bone_11, right1), new(Bone_04, left1));
     public static DoorData Bone_11__right2 { get; } = new(new(Bone_11, right2), new(Bone_04, left2));
-    public static DoorData Bone_11__top1 { get; } = new(new(Bone_11, top1), new(Mosstown_01, bot1));
+    public static DoorData Bone_11__top1 { get; } = new(new(Bone_11, top1), new(Mosstown_01, bot1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("trapdoor", ObstacleType.OneWayMechanismExit, ObstacleSeverity.InterruptsEntry, new PersistentBoolSaveInfo(SceneName: Mosstown_01, ID: "Trapdoor Lever"))
+        ])
+    };
     public static DoorData Bone_11b__right1 { get; } = new(new(Bone_11b, right1), new(Bone_01b, left1));
-    public static DoorData Bone_11b__top1 { get; } = new(new(Bone_11b, top1), new(Bone_11, bot1));
+    public static DoorData Bone_11b__top1 { get; } = new(new(Bone_11b, top1), new(Bone_11, bot1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Bone Drop Plat Sequence", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.InterruptsEntry, new PersistentBoolSaveInfo(ID: "Plate"))
+        ])
+    };
     public static DoorData Bone_12__left1 { get; } = new(new(Bone_12, left1), new(Bone_08, door1));
     public static DoorData Bone_14__left1 { get; } = new(new(Bone_14, left1), new(Bone_03, right1));
     public static DoorData Bone_14__right1 { get; } = new(new(Bone_14, right1), new(Bone_07, left1));
@@ -479,7 +530,13 @@ public static class BaseGateList
     public static DoorData Bone_15__left1 { get; } = new(new(Bone_15, left1), new(Bone_10, right1));
     public static DoorData Bone_16__left1 { get; } = new(new(Bone_16, left1), new(Bone_02, right1));
     public static DoorData Bone_16__right1 { get; } = new(new(Bone_16, right1), new(Bone_09, left1));
-    public static DoorData Bone_16__top1 { get; } = new(new(Bone_16, top1), new(Bone_15, bot1));
+    public static DoorData Bone_16__top1 { get; } = new(new(Bone_16, top1), new(Bone_15, bot1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall (2)", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo()),
+            new UnmaskerInfo("Masks")
+        ])
+    };
     public static DoorData Bone_17__right1 { get; } = new(new(Bone_17, right1), new(Bone_03, left4));
     public static DoorData Bone_18__left1 { get; } = new(new(Bone_18, left1), new(Bone_06, right1));
     public static DoorData Bone_19__bot1 { get; } = new(new(Bone_19, bot1), new(Bone_07, top1));

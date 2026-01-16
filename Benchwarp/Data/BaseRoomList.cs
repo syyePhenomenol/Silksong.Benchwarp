@@ -1033,7 +1033,7 @@ public static class BaseRoomList
             Bone_01__right1,
             Bone_01__right2,
             Bone_01__top2,
-            Bone_01__top2_extra,
+            //Bone_01__top2_extra,
         ]),
         ManuallyVerified = true,
     };
@@ -1041,8 +1041,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_01b,
         MapZone = MapZone.MOSSTOWN,
-        MapArea = MapAreaNames.The_Marrow,
-        TitledArea = TitledAreaNames.The_Marrow,
+        MapArea = MapAreaNames.Mosslands,
+        TitledArea = TitledAreaNames.Bone_Bottom,
         Gates = new([
             Bone_01b__left1,
             Bone_01b__left2,
@@ -1127,8 +1127,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_05b,
         MapZone = MapZone.MOSSTOWN,
-        MapArea = MapAreaNames.The_Marrow,
-        TitledArea = TitledAreaNames.The_Marrow,
+        MapArea = MapAreaNames.Mosslands,
+        TitledArea = TitledAreaNames.Bone_Bottom,
         Gates = new([
             Bone_05b__left1,
             Bone_05b__top1,
@@ -1210,8 +1210,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_11,
         MapZone = MapZone.MOSSTOWN,
-        MapArea = MapAreaNames.The_Marrow,
-        TitledArea = TitledAreaNames.The_Marrow,
+        MapArea = MapAreaNames.Mosslands,
+        TitledArea = TitledAreaNames.Bone_Bottom,
         Gates = new([
             Bone_11__bot1,
             Bone_11__left1,
@@ -1225,8 +1225,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_11b,
         MapZone = MapZone.MOSSTOWN,
-        MapArea = MapAreaNames.The_Marrow,
-        TitledArea = TitledAreaNames.The_Marrow,
+        MapArea = MapAreaNames.Mosslands,
+        TitledArea = TitledAreaNames.Bone_Bottom,
         Gates = new([
             Bone_11b__right1,
             Bone_11b__top1,
@@ -1795,8 +1795,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Bone_Steel_Servant,
         MapZone = MapZone.PATH_OF_BONE,
-        MapArea = MapAreaNames.The_Marrow,
-        TitledArea = TitledAreaNames.The_Marrow,
+        MapArea = MapAreaNames.Mosslands,
+        TitledArea = TitledAreaNames.Bone_Bottom,
         Gates = new([
             Bone_Steel_Servant__right1,
         ]),
