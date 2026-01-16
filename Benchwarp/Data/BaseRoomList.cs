@@ -3159,8 +3159,8 @@ public static class BaseRoomList
     {
         Name = SceneNames.Dust_09,
         MapZone = MapZone.DUSTPENS,
-        MapArea = MapAreaNames.Sinner_s_Road,
-        TitledArea = TitledAreaNames.Sinner_s_Road,
+        MapArea = MapAreaNames.Bilewater,
+        TitledArea = TitledAreaNames.Bilewater,
         Gates = new([
             Dust_09__door1,
             Dust_09__door2,

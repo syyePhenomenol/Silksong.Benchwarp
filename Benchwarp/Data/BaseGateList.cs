@@ -1276,7 +1276,12 @@ public static class BaseGateList
     public static DoorData Dust_01__right1 { get; } = new(new(Dust_01, right1), new(Dust_02, left2));
     public static DoorData Dust_02__left1 { get; } = new(new(Dust_02, left1), new(Dust_10, right1));
     public static DoorData Dust_02__left2 { get; } = new(new(Dust_02, left2), new(Dust_01, right1));
-    public static DoorData Dust_02__right1 { get; } = new(new(Dust_02, right1), new(Dust_04, left1));
+    public static DoorData Dust_02__right1 { get; } = new(new(Dust_02, right1), new(Dust_04, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("grey_lever_gate_right_top", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(ID: "Dust_02Gate")),
+        ])
+    };
     public static DoorData Dust_02__right2 { get; } = new(new(Dust_02, right2), new(Dust_04, left2));
     public static DoorData Dust_02__right3 { get; } = new(new(Dust_02, right3), new(Dust_03, left1));
     public static DoorData Dust_02__top1 { get; } = new(new(Dust_02, top1), new(Dust_05, bot1));
@@ -1284,9 +1289,19 @@ public static class BaseGateList
     public static DoorData Dust_03__left1 { get; } = new(new(Dust_03, left1), new(Dust_02, right3));
     public static DoorData Dust_03__top1 { get; } = new(new(Dust_03, top1), new(Dust_Chef, bot1));
     public static DoorData Dust_04__door1 { get; } = new(new(Dust_04, door1), new(Dust_Shack, left1));
-    public static DoorData Dust_04__left1 { get; } = new(new(Dust_04, left1), new(Dust_02, right1));
+    public static DoorData Dust_04__left1 { get; } = new(new(Dust_04, left1), new(Dust_02, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("grey_lever_gate", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(SceneName: Dust_02, ID: "Dust_02Gate")),
+        ])
+    };
     public static DoorData Dust_04__left2 { get; } = new(new(Dust_04, left2), new(Dust_02, right2));
-    public static DoorData Dust_04__right1 { get; } = new(new(Dust_04, right1), new(Dust_Chef, left1));
+    public static DoorData Dust_04__right1 { get; } = new(new(Dust_04, right1), new(Dust_Chef, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("gate", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(SceneName: Dust_Chef, ID: "greymoor_lever_simple")),
+        ])
+    };
     public static DoorData Dust_05__bot1 { get; } = new(new(Dust_05, bot1), new(Dust_02, top1));
     public static DoorData Dust_05__left1 { get; } = new(new(Dust_05, left1))
     {
@@ -1295,9 +1310,24 @@ public static class BaseGateList
             new(Dust_Maze_08_completed, right1)
         ])
     };
-    public static DoorData Dust_05__right1 { get; } = new(new(Dust_05, right1), new(Dust_06, left1));
-    public static DoorData Dust_06__left1 { get; } = new(new(Dust_06, left1), new(Dust_05, right1));
-    public static DoorData Dust_06__right1 { get; } = new(new(Dust_06, right1), new(Shadow_05, left1));
+    public static DoorData Dust_05__right1 { get; } = new(new(Dust_05, right1), new(Dust_06, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("greymoor_metal_gate/Gate Parent", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess, new PlayerDataBoolSaveInfo(nameof(PlayerData.openedDust05Gate))),
+        ])
+    };
+    public static DoorData Dust_06__left1 { get; } = new(new(Dust_06, left1), new(Dust_05, right1))
+    {
+        Obstacles = new([
+            new TestObjObstacleInfo("Dust_05 Gate", true, ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess, new PlayerDataBoolSaveInfo(nameof(PlayerData.openedDust05Gate))),
+        ])
+    };
+    public static DoorData Dust_06__right1 { get; } = new(new(Dust_06, right1), new(Shadow_05, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.TwoWayBreakable, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(SceneName: Shadow_05))
+        ])
+    };
     public static DoorData Dust_06__right2 { get; } = new(new(Dust_06, right2), new(Dust_11, left1));
     public static DoorData Dust_06__right3 { get; } = new(new(Dust_06, right3), new(Dust_12, left1));
     public static DoorData Dust_09__door1 { get; } = new(new(Dust_09, door1), new(Organ_01, left1));
@@ -1322,7 +1352,12 @@ public static class BaseGateList
     public static DoorData Dust_12__left1 { get; } = new(new(Dust_12, left1), new(Dust_06, right3));
     public static DoorData Dust_Barb__top1 { get; } = new(new(Dust_Barb, top1), new(Dust_03, bot1));
     public static DoorData Dust_Chef__bot1 { get; } = new(new(Dust_Chef, bot1), new(Dust_03, top1));
-    public static DoorData Dust_Chef__left1 { get; } = new(new(Dust_Chef, left1), new(Dust_04, right1));
+    public static DoorData Dust_Chef__left1 { get; } = new(new(Dust_Chef, left1), new(Dust_04, right1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("dust_chef_door_inner/gate", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(ID: "greymoor_lever_simple")),
+        ])
+    };
     public static DoorData Dust_Maze_01__left1 { get; } = new(new(Dust_Maze_01, left1));
     public static DoorData Dust_Maze_01__right1 { get; } = new(new(Dust_Maze_01, right1));
     public static DoorData Dust_Maze_01__top1 { get; } = new(new(Dust_Maze_01, top1));
@@ -1854,7 +1889,7 @@ public static class BaseGateList
     public static DoorData Shadow_05__left1 { get; } = new(new(Shadow_05, left1), new(Dust_06, right1))
     {
         Obstacles = new([
-            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
+            new ObstacleInfo("Breakable Wall", ObstacleType.TwoWayBreakable, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo())
         ])
     };
     public static DoorData Shadow_05__right1 { get; } = new(new(Shadow_05, right1), new(Shadow_09, left2));
@@ -2457,7 +2492,12 @@ public static class BaseGateList
     public static DoorData Ward_01__left2 { get; } = new(new(Ward_01, left2), new(Ward_02b, right1));
     public static DoorData Ward_01__left3 { get; } = new(new(Ward_01, left3), new(Ward_02, right1));
     public static DoorData Ward_01__right1 { get; } = new(new(Ward_01, right1), new(Ward_03, left1));
-    public static DoorData Ward_01__right2 { get; } = new(new(Ward_01, right2), new(Ward_04, left1));
+    public static DoorData Ward_01__right2 { get; } = new(new(Ward_01, right2), new(Ward_04, left1))
+    {
+        Obstacles = new([
+            new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo()),
+        ])
+    };
     public static DoorData Ward_01__right3 { get; } = new(new(Ward_01, right3), new(Ward_05, left1));
     public static DoorData Ward_02__bot1 { get; } = new(new(Ward_02, bot1), new(Under_08, top1));
     public static DoorData Ward_02__door_cinematicEnd { get; } = new(new(Ward_02, door_cinematicEnd));
@@ -2466,7 +2506,12 @@ public static class BaseGateList
     public static DoorData Ward_02b__bot1 { get; } = new(new(Ward_02b, bot1), new(Ward_02, top1));
     public static DoorData Ward_02b__right1 { get; } = new(new(Ward_02b, right1), new(Ward_01, left2));
     public static DoorData Ward_03__bot1 { get; } = new(new(Ward_03, bot1), new(Ward_06, top1));
-    public static DoorData Ward_03__door1 { get; } = new(new(Ward_03, door1), new(Ward_09, left1));
+    public static DoorData Ward_03__door1 { get; } = new(new(Ward_03, door1), new(Ward_09, left1))
+    {
+        Obstacles = new([
+            new TestObjObstacleInfo("Sherma_Door_Open", true, ObstacleType.OneWayBreakableEntry, ObstacleSeverity.InterruptsEntry),
+        ])
+    };
     public static DoorData Ward_03__left1 { get; } = new(new(Ward_03, left1), new(Ward_01, right1));
     public static DoorData Ward_03__top1 { get; } = new(new(Ward_03, top1), new(Ward_07, bot1));
     public static DoorData Ward_04__left1 { get; } = new(new(Ward_04, left1), new(Ward_01, right2));

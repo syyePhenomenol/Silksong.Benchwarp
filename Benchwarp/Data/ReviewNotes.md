@@ -57,17 +57,11 @@ The following areas have only complex obstacles unhandled.
     - Bone_11b__top1: An Animator normally moves the blocking platform to the middle of the room. Currently unhandled for NoSave.
     - Bone_10__door2: Still needs permanent obstacle handling.
 
-The following areas have not been handled at all:
+### Whiteward
+    - Ward_03__door1: Needs permanent obstacle handling (normally checks quest progress).
+    - Ward_06__bot1: Fully unhandled for now, because entering the scene this way forces Hornet into a hazard.
 
-### Sinner's_Road
-    - Dust_02__right1: collider obstacle.
-    - Dust_04__left1: collider obstacle.
-    - Dust_04__right1: collider obstacle.
-    - Dust_05__right1: collider obstacle (lever).
-    - Dust_06__left1: collider obstacle.
-    - Dust_06__right1: collider obstacle.
-    - Dust_09: map/titled area should be Bilewater.
-    - Dust_Chef__left1: collider obstacle (lever).
+The following areas have not been handled at all:
 
 ### Whispering_Vaults
     - Library_01__left3: collider obstacle.
@@ -126,13 +120,6 @@ The following areas have not been handled at all:
     - Song_Tower_01__right1: collider obstacle. Lace fight immediately starts.
     - Song_Tower_Destroyed: map/titled area should be The Cradle.
     - Song_Tower_Destroyed__bot1: breaking animation of object plays, but ideally the object should not be there at all on entry.
-
-### Whiteward
-    - Ward_01__right2: Collider obstacle.
-    - Ward_02__bot1: Works fine. Note-worthy: Unravelled can't be fought coming from here.
-    - Ward_03__door1: Door1 is not recognized - warps to bot1 instead.
-    - Ward_06__bot1: Automatically flings you into a hazard with invincibility. Funny softlock.
-    - Ward_09__left1: Leads to Ward_03__bot1 instead of the door if it hasn't been unlocked.
 
 ### Sands of Karak
     - Coral_23__left1/left2: Camera shows partial black screen.
@@ -474,6 +461,16 @@ The following areas have not been handled at all:
     - Cog_Dancers__top1: collider obstacle. Different objects in Act 3.
     - Cog_11_Destroyed__left1: attempting to door warp here softlocks the game, regardless of Act 3 or not. The scene probably doesn't exist.
 
+### Sinner's_Road
+    - Dust_02__right1: collider obstacle.
+    - Dust_04__left1: collider obstacle.
+    - Dust_04__right1: collider obstacle.
+    - Dust_05__right1: collider obstacle (lever).
+    - Dust_06__left1: collider obstacle.
+    - Dust_06__right1: collider obstacle.
+    - Dust_09: map/titled area should be Bilewater.
+    - Dust_Chef__left1: collider obstacle (lever).
+
 ### Shellwood
     - Bellshrine_03__right1: collider obstacle.
     - Shellwood_01__left2: collider obstacle.
@@ -508,6 +505,12 @@ The following areas have not been handled at all:
     - Bone_11b: map area should be Mosslands and titled area should be Bone Bottom.
     - Bone_16__top1: collider obstacle (hidden area behind breakable wall to the left).
     - Bone_Steel_Servant: map area should be Mosslands and titled area should be Bone Bottom.
+
+### Whiteward
+    - Ward_01__right2: Collider obstacle.
+    - Ward_02__bot1: Works fine. Note-worthy: Unravelled can't be fought coming from here.
+    - Ward_03__door1: Door1 is not recognized - warps to bot1 instead.
+    - Ward_09__left1: Leads to Ward_03__bot1 instead of the door if it hasn't been unlocked.
 
 ### Doors with dynamic targets
     - Shadow_04__left1: collider obstacle.
