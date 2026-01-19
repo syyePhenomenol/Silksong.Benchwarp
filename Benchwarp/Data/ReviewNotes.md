@@ -96,23 +96,9 @@ The following areas have not been handled at all:
     - Shellwood_25b: titled area should be Chapel of the Witch.
 
 ### The_Slab
-    - Slab_02__left1: collider obstacle.
-    - Slab_03__left6: collider obstacle.
-    - Slab_03__right1: collider obstacle.
-    - Slab_03__right2: collider obstacle.
-    - Slab_03__right5: collider obstacle.
-    - Slab_03__right7: collider obstacle.
-    - Slab_03__right9: collider obstacle.
-    - Slab_04__door1: arrives at right1 instead. The transition gate doesn't seem to exist.
-    - Slab_05__right1: collider obstacle.
-    - Slab_06__door1: arrives at top1 instead. The transition gate doesn't seem to exist.
     - Slab_10c__door1: collider obstacle (door locked by numerous chains).
-    - Slab_15__top1: visual obstacle (secret area behind breakable wall on right side of room).
     - Slab_16__door1: arrives at bot1 instead. Existence of door1 seems to depend on Broodmother quest (should be checked).
-    - Slab_18__left1: collider obstacle.
-    - Slab_21__left1: collider obstacle.
     - Slab_23__right1: collider obstacle. Gate is shut and the arena starts.
-    - Slab_Cell_Quiet__left1: when flipped, it should be Slab_23__door2, not Slab_04__door1.
 
 ### The_Marrow
     - Bellshrine__right1: collider obstacle.
@@ -502,6 +488,22 @@ The following areas have not been handled at all:
     - Cog_06__right1: collider obstacle.
     - Cog_Dancers__top1: collider obstacle. Different objects in Act 3.
     - Cog_11_Destroyed__left1: attempting to door warp here softlocks the game, regardless of Act 3 or not. The scene probably doesn't exist.
+    
+### The_Slab
+    - Slab_02__left1: collider obstacle.
+    - Slab_03__left6: collider obstacle.
+    - Slab_03__right1: collider obstacle.
+    - Slab_03__right2: collider obstacle.
+    - Slab_03__right5: collider obstacle.
+    - Slab_03__right7: collider obstacle.
+    - Slab_03__right9: collider obstacle.
+    - Slab_04__door1: arrives at right1 instead. The transition gate doesn't seem to exist.
+    - Slab_05__right1: collider obstacle.
+    - Slab_06__door1: arrives at top1 instead. The transition gate doesn't seem to exist.
+    - Slab_15__top1: visual obstacle (secret area behind breakable wall on right side of room).
+    - Slab_18__left1: collider obstacle.
+    - Slab_21__left1: collider obstacle.
+    - Slab_Cell_Quiet__left1: when flipped, it should be Slab_23__door2, not Slab_04__door1.
 
 ### Doors with dynamic targets
     - Shadow_04__left1: collider obstacle.

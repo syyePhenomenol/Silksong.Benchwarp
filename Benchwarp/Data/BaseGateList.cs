@@ -1940,7 +1940,17 @@ public static class BaseGateList
     public static DoorData Shellwood_Witch__right1 { get; } = new(new(Shellwood_Witch, right1), new(Shellwood_02, left3));
     public static DoorData Slab_01__left1 { get; } = new(new(Slab_01, left1), new(Slab_02, right1));
     public static DoorData Slab_01__right1 { get; } = new(new(Slab_01, right1), new(Song_04, left1));
-    public static DoorData Slab_02__left1 { get; } = new(new(Slab_02, left1), new(Slab_03, right5));
+    public static DoorData Slab_02__left1 { get; } = new(new(Slab_02, left1), new(Slab_03, right5))
+    {
+        Obstacles = new([
+                new ObstacleInfo("slab_gate_simple (1)", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(ID: "slab_jail_lever")),
+                new ObstacleInfo("slab_gate_simple", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess),
+                new ObstacleInfo("slab_gate_simple (7)", ObstacleType.Mask, ObstacleSeverity.LimitsVisibility),
+                new ObstacleInfo("slab_gate_simple (5)", ObstacleType.Mask, ObstacleSeverity.LimitsVisibility),
+                new ObstacleInfo("slab_gate_simple (4)", ObstacleType.Mask, ObstacleSeverity.AbnormalVisual),
+                new ObstacleInfo("slab_gate_simple (6)", ObstacleType.Mask, ObstacleSeverity.AbnormalVisual)
+            ])
+    };
     public static DoorData Slab_02__right1 { get; } = new(new(Slab_02, right1), new(Slab_01, left1));
     public static DoorData Slab_03__door_slabCaged { get; } = new(new(Slab_03, door_slabCaged));
     public static DoorData Slab_03__left1 { get; } = new(new(Slab_03, left1), new(Slab_16, right1));
@@ -1948,26 +1958,62 @@ public static class BaseGateList
     public static DoorData Slab_03__left3 { get; } = new(new(Slab_03, left3), new(Slab_14, right1));
     public static DoorData Slab_03__left4 { get; } = new(new(Slab_03, left4), new(Slab_13, right1));
     public static DoorData Slab_03__left5 { get; } = new(new(Slab_03, left5), new(Slab_04, right1));
-    public static DoorData Slab_03__left6 { get; } = new(new(Slab_03, left6), new(Slab_05, right1));
+    public static DoorData Slab_03__left6 { get; } = new(new(Slab_03, left6), new(Slab_05, right1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Jail Gate Door (1)", ObstacleType.TwoWayMechanism, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(ID: "Slab Lock (2)")),
+            ])
+    };
     public static DoorData Slab_03__left7 { get; } = new(new(Slab_03, left7), new(Slab_07, right1));
     public static DoorData Slab_03__left8 { get; } = new(new(Slab_03, left8), new(Slab_07, right2));
-    public static DoorData Slab_03__right1 { get; } = new(new(Slab_03, right1), new(Slab_17, left1));
-    public static DoorData Slab_03__right2 { get; } = new(new(Slab_03, right2), new(Slab_18, left1));
+    public static DoorData Slab_03__right1 { get; } = new(new(Slab_03, right1), new(Slab_17, left1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Jail Gate Door (2)", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility),
+            ])
+    };
+    public static DoorData Slab_03__right2 { get; } = new(new(Slab_03, right2), new(Slab_18, left1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Cage_Rubbish", ObstacleType.OneWayBreakableExit, ObstacleSeverity.InterruptsEntry, new PersistentBoolSaveInfo(SceneName: Slab_18, ID:"One Way Wall"))
+            ])
+    };
     public static DoorData Slab_03__right3 { get; } = new(new(Slab_03, right3), new(Slab_20, left1));
     public static DoorData Slab_03__right4 { get; } = new(new(Slab_03, right4), new(Slab_23, left1));
-    public static DoorData Slab_03__right5 { get; } = new(new(Slab_03, right5), new(Slab_02, left1));
-    public static DoorData Slab_03__right7 { get; } = new(new(Slab_03, right7), new(Slab_19b, left1));
+    public static DoorData Slab_03__right5 { get; } = new(new(Slab_03, right5), new(Slab_02, left1))
+    {
+        Obstacles = new([
+                // the PersistentBool is for the lever on the other side, NOT for the gate
+                new ObstacleInfo("slab_gate_entrance_inside/slab_gate_simple (2)", ObstacleType.OneWayMechanismExit, ObstacleSeverity.LimitsRoomAccess, new PersistentBoolSaveInfo(SceneName: Slab_02, ID: "slab_jail_lever"))
+            ])
+    };
+    public static DoorData Slab_03__right7 { get; } = new(new(Slab_03, right7), new(Slab_19b, left1))
+    {
+        Obstacles = new ([
+                new ObstacleInfo("Jail Gate Door (4)", ObstacleType.OneWayMechanismEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility),
+            ])
+    };
     public static DoorData Slab_03__right8 { get; } = new(new(Slab_03, right8), new(Slab_08, left1));
-    public static DoorData Slab_03__right9 { get; } = new(new(Slab_03, right9), new(Slab_12, left1));
+    public static DoorData Slab_03__right9 { get; } = new(new(Slab_03, right9), new(Slab_12, left1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Coral Crust Wall Tall (2)", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility),
+            ])
+    };
     public static DoorData Slab_04__bot1 { get; } = new(new(Slab_04, bot1), new(Slab_05, top1));
-    public static DoorData Slab_04__door1 { get; } = new(new(Slab_04, door1), new(Slab_Cell_Quiet, left1), null);
+    //public static DoorData Slab_04__door1 { get; } = new(new(Slab_04, door1), new(Slab_Cell_Quiet, left1), null);
     public static DoorData Slab_04__right1 { get; } = new(new(Slab_04, right1), new(Slab_03, left5));
     public static DoorData Slab_04__top1 { get; } = new(new(Slab_04, top1), new(Slab_13, bot1));
     public static DoorData Slab_05__bot1 { get; } = new(new(Slab_05, bot1), new(Slab_06, top1));
-    public static DoorData Slab_05__right1 { get; } = new(new(Slab_05, right1), new(Slab_03, left6));
+    public static DoorData Slab_05__right1 { get; } = new(new(Slab_05, right1), new(Slab_03, left6))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Jail Gate Door (2)", ObstacleType.TwoWayMechanism, ObstacleSeverity.LimitsRoomAccess | ObstacleSeverity.LimitsVisibility, new PersistentBoolSaveInfo(SceneName: Slab_03, ID: "Slab Lock (2)")),
+            ])
+    };
     public static DoorData Slab_05__top1 { get; } = new(new(Slab_05, top1), new(Slab_04, bot1));
     public static DoorData Slab_06__door_fastTravelExit { get; } = new(new(Slab_06, door_fastTravelExit));
-    public static DoorData Slab_06__door1 { get; } = new(new(Slab_06, door1), new(Slab_Cell_Quiet, left1), null);
+    //public static DoorData Slab_06__door1 { get; } = new(new(Slab_06, door1), new(Slab_Cell_Quiet, left1), null);
     public static DoorData Slab_06__left1 { get; } = new(new(Slab_06, left1), new(Peak_01, right4));
     public static DoorData Slab_06__top1 { get; } = new(new(Slab_06, top1), new(Slab_05, bot1));
     public static DoorData Slab_07__right1 { get; } = new(new(Slab_07, right1), new(Slab_03, left7));
@@ -1988,7 +2034,14 @@ public static class BaseGateList
     public static DoorData Slab_15__bot1 { get; } = new(new(Slab_15, bot1), new(Slab_14, top1));
     public static DoorData Slab_15__left1 { get; } = new(new(Slab_15, left1), new(Peak_01, right2));
     public static DoorData Slab_15__right1 { get; } = new(new(Slab_15, right1), new(Slab_03, left2));
-    public static DoorData Slab_15__top1 { get; } = new(new(Slab_15, top1), new(Slab_16, bot1));
+    public static DoorData Slab_15__top1 { get; } = new(new(Slab_15, top1), new(Slab_16, bot1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Breakable Wall Waterways", ObstacleType.TwoWayBreakable, ObstacleSeverity.LimitsVisibility),
+                new UnmaskerInfo("Masks"),
+                new ObstacleInfo("Camera Locks", ObstacleType.Other, ObstacleSeverity.LimitsVisibility)
+            ])
+    };
     public static DoorData Slab_16__bot1 { get; } = new(new(Slab_16, bot1), new(Slab_15, top1));
     public static DoorData Slab_16__door1 { get; } = new(new(Slab_16, door1), new(Slab_16b, left1));
     public static DoorData Slab_16__left1 { get; } = new(new(Slab_16, left1), new(Peak_01, right1));
@@ -1996,12 +2049,23 @@ public static class BaseGateList
     public static DoorData Slab_16__top1 { get; } = new(new(Slab_16, top1), new(Slab_22, bot1));
     public static DoorData Slab_16b__left1 { get; } = new(new(Slab_16b, left1), new(Slab_16, door1));
     public static DoorData Slab_17__left1 { get; } = new(new(Slab_17, left1), new(Slab_03, right1));
-    public static DoorData Slab_18__left1 { get; } = new(new(Slab_18, left1), new(Slab_03, right2));
+    public static DoorData Slab_18__left1 { get; } = new(new(Slab_18, left1), new(Slab_03, right2))
+    {
+        Obstacles = new([
+                new ObstacleInfo("One Way Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.InterruptsEntry, new PersistentBoolSaveInfo()),
+            ])
+    };
     public static DoorData Slab_18__right1 { get; } = new(new(Slab_18, right1), new(Slab_21, left1));
     public static DoorData Slab_19b__left1 { get; } = new(new(Slab_19b, left1), new(Slab_03, right7));
     public static DoorData Slab_19b__right1 { get; } = new(new(Slab_19b, right1), new(Slab_10c, left1));
     public static DoorData Slab_20__left1 { get; } = new(new(Slab_20, left1), new(Slab_03, right3));
-    public static DoorData Slab_21__left1 { get; } = new(new(Slab_21, left1), new(Slab_18, right1));
+    public static DoorData Slab_21__left1 { get; } = new(new(Slab_21, left1), new(Slab_18, right1))
+    {
+        Obstacles = new([
+                new ObstacleInfo("Breakable Wall", ObstacleType.OneWayBreakableEntry, ObstacleSeverity.LimitsRoomAccess),
+                new UnmaskerInfo("Masks")
+            ])
+    };
     public static DoorData Slab_21__left3 { get; } = new(new(Slab_21, left3), new(Slab_23, right1));
     public static DoorData Slab_21__top1 { get; } = new(new(Slab_21, top1), new(Slab_22, bot2));
     public static DoorData Slab_22__bot1 { get; } = new(new(Slab_22, bot1), new(Slab_16, top1));
@@ -2012,7 +2076,7 @@ public static class BaseGateList
     public static DoorData Slab_23__right1 { get; } = new(new(Slab_23, right1), new(Slab_21, left3));
     public static DoorData Slab_Cell__left1 { get; } = new(new(Slab_Cell, left1), new(Slab_13, door1));
     public static DoorData Slab_Cell_Creature__left1 { get; } = new(new(Slab_Cell_Creature, left1), new(Slab_23, door1));
-    public static DoorData Slab_Cell_Quiet__left1 { get; } = new(new(Slab_Cell_Quiet, left1), new(Slab_23, door2), new(Slab_04, door1));
+    public static DoorData Slab_Cell_Quiet__left1 { get; } = new(new(Slab_Cell_Quiet, left1), new(Slab_23, door2));
     public static DoorData Slab_Cell_Quiet__left2 { get; } = new(new(Slab_Cell_Quiet, left2), new(Slab_08, door1));
     public static DoorData Song_01__bot1 { get; } = new(new(Song_01, bot1), new(Song_01c, top1));
     public static DoorData Song_01__right2 { get; } = new(new(Song_01, right2), new(Under_07b, left1));
