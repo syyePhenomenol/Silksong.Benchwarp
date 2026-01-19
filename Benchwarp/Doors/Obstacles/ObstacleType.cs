@@ -32,6 +32,11 @@ public enum ObstacleType
     /// </summary>
     OneWayMechanismExit,
 
+    // /// <summary>
+    // /// A wall that opens by switch/lever mechanism, controlled from both sides.
+    // /// </summary>
+    TwoWayMechanism,
+
     /// <summary>
     /// A wall/transition that opens after progressing further into the game in some abstract way.
     /// </summary>
@@ -51,9 +56,4 @@ public enum ObstacleType
     /// Anything else that does not fit into the other categories.
     /// </summary>
     Other
-
-    // /// <summary>
-    // /// A wall that opens by switch/lever mechanism, controlled from both sides.
-    // /// </summary>
-    // TwoWayMechanism,
 }
