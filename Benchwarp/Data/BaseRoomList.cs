@@ -5388,7 +5388,6 @@ public static class BaseRoomList
         TitledArea = TitledAreaNames.The_Slab,
         Gates = new([
             Slab_04__bot1,
-            Slab_04__door1,
             Slab_04__right1,
             Slab_04__top1,
         ]),
@@ -5415,7 +5414,6 @@ public static class BaseRoomList
         TitledArea = TitledAreaNames.The_Slab,
         Gates = new([
             Slab_06__door_fastTravelExit,
-            Slab_06__door1,
             Slab_06__left1,
             Slab_06__top1,
         ]),
